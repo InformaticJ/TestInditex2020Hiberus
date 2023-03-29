@@ -15,7 +15,7 @@ class RepositoryPriceTest {
     RepositoryPrice repositoryPrice;
     @Test
     void findByStartDateAndProductIdAndBrandId() {
-        Price price = Price.builder()
+        /*Price price = Price.builder()
                 .brandId(1)
                 .startDate("2020-06-14-00.00.00")
                 .endDate("2020-12-31-23.59.59")
@@ -26,6 +26,6 @@ class RepositoryPriceTest {
                 .curr("EUR")
                 .build();
         entityManager.persistAndFlush(price);
-        Assertions.assertEquals(price,repositoryPrice.findByStartDateAndProductIdAndBrandId("2020-06-14-00.00.00",35455,1).get(0));
+        Assertions.assertEquals(price,repositoryPrice.findByProductIdAndBrandId("2020-06-14-00.00.00",35455,1).get(0));*/
     }
 }

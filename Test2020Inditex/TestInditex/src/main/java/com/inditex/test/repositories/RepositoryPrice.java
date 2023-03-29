@@ -6,6 +6,8 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 @Repository
 public interface RepositoryPrice extends JpaRepository<Price,Integer> {
-    List<Price> findByStartDateAndProductIdAndBrandId(String startDate,Integer ProductId,Integer BrandId);
+    List<Price> findByProductIdAndBrandId(Integer ProductId,Integer BrandId);
+    Boolean existsByBrandId(Integer BrandId);
+    Boolean existsByProductId(Integer ProductId);
 
 }

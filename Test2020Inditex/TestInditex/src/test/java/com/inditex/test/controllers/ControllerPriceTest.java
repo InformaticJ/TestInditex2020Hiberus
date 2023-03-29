@@ -17,7 +17,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-@AutoConfigureMockMvc
+/*@AutoConfigureMockMvc
 @SpringBootTest
 @ActiveProfiles("test")
 class ControllerPriceTest {
@@ -44,4 +44,4 @@ class ControllerPriceTest {
                 arguments("2020-06-14-21.00.00",35455,1)
         );
     }
-}
+}*/

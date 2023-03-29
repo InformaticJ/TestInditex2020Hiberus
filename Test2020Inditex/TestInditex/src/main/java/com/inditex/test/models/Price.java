@@ -1,11 +1,12 @@
 package com.inditex.test.models;
 
+import com.inditex.test.dto.PriceDto;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Table(name = "Prices")
@@ -14,16 +15,15 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Price {
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     @Column(name = "brand_id")
     private Integer brandId;
     @Column(name = "start_date")
-    private String  startDate;
+    private Date startDate;
     @Column(name = "end_date")
-    private String endDate;
+    private Date endDate;
     @Column(name = "price_list")
     private Integer priceList;
     @Column(name = "product_id")
@@ -34,4 +34,5 @@ public class Price {
     private double price;
     @Column(name = "curr")
     private String curr;
+
 }
