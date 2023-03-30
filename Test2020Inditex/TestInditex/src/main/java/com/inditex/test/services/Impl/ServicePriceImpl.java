@@ -49,14 +49,14 @@ public class ServicePriceImpl implements ServicePrice {
         if(repositoryPrice.existsByBrandId(brandId)){
             return true;
         }
-        throw new ExceptionNoExistsBrand("No exists brandId " + brandId);
+        throw new ExceptionNoExistsBrand("No exists brandId");
     }
 
     private Boolean checkProduct(Integer productId) throws ExceptionNoExistsProduct {
         if(repositoryPrice.existsByProductId(productId)){
             return true;
         }
-        throw new ExceptionNoExistsProduct("No exists productId " + productId);
+        throw new ExceptionNoExistsProduct("No exists productId");
     }
 
     private Date parseDate(String date){

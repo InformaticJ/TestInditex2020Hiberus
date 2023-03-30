@@ -17,7 +17,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-/*@AutoConfigureMockMvc
+@AutoConfigureMockMvc
 @SpringBootTest
 @ActiveProfiles("test")
 class ControllerPriceTest {
@@ -28,9 +28,9 @@ class ControllerPriceTest {
     private ServicePrice servicePrice;
     @ParameterizedTest
     @MethodSource("getPricesParams")
-    void getPrices(String startDate,Integer idProduct,Integer idBrand) throws Exception {
-        when(servicePrice.getPrices(startDate,idProduct,idBrand)).thenReturn(new ArrayList<>());
-        mockMvc.perform(get("/prices?startDate="+startDate+"&"+"idProduct="+idProduct+"&"+"idBrand="+ idBrand))
+    void getPrices(String date,Integer productId,Integer brandId) throws Exception {
+        when(servicePrice.getPrices(date,productId,brandId)).thenReturn(new ArrayList<>());
+        mockMvc.perform(get("/prices?date="+date+"&"+"productId="+productId+"&"+"brandId="+ brandId))
                 .andDo(print())
                 .andExpect(content().json(String.valueOf(new ArrayList<>())))
                 .andExpect(status().isOk());
@@ -44,4 +44,4 @@ class ControllerPriceTest {
                 arguments("2020-06-14-21.00.00",35455,1)
         );
     }
-}*/
+}
