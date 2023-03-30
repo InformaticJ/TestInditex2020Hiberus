@@ -1,4 +1,4 @@
-package com.inditex.test.controllers.Impl;
+package com.inditex.test.controllers;
 
 import com.inditex.test.dto.PriceDto;
 import org.springframework.http.ResponseEntity;
