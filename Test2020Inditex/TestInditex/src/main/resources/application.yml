@@ -43,6 +43,15 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+    properties:
+      hibernate:
+        formatSql: true
+
+  springfox:
+    documentation:
+      swagger:
+        v2:
+          path: /api-docs
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
