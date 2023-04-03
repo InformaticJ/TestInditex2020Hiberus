@@ -12,9 +12,9 @@ import java.util.List;
 @Component
 public class PriceUseCase implements PricePort {
     @Autowired
-    RepositoryPriceH2 repositoryPriceMySQL;
+    RepositoryPriceH2 repositoryPriceH2;
     @Override
     public List<Price> getPrices(Date date, Integer productId, Integer brandId) {
-        return repositoryPriceMySQL.getPrices(date,productId,brandId);
+        return repositoryPriceH2.getPrices(date,productId,brandId);
     }
 }
