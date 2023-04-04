@@ -8,5 +8,5 @@ import java.util.Date;
 import java.util.List;
 
 public interface ControllerPrice {
-    ResponseEntity<List<PriceDto>> getPrices(Date date, Integer ProductId, Integer BrandId) throws ParseException;
+    ResponseEntity<List<PriceDto>> getPrices(Date date, Integer ProductId, Integer BrandId);
 }
