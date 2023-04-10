@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @Entity
@@ -21,9 +22,9 @@ public class PriceEntity {
         @Column(name = "brand_id")
         private Integer brandId;
         @Column(name = "start_date")
-        private Date startDate;
+        private LocalDateTime startDate;
         @Column(name = "end_date")
-        private Date endDate;
+        private LocalDateTime endDate;
         @Column(name = "price_list")
         private Integer priceList;
         @Column(name = "product_id")

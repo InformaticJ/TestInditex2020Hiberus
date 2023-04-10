@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 
@@ -22,19 +23,11 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ControllerPriceImpl implements ControllerPrice {
 
-
     private final PriceUseCase priceUseCase;
 
     private final PriceMapper priceMapper;
-
-    @ApiOperation(value = "Get prices by a date", notes = "Return prices of a date inserted")
-    @ApiResponses(value =  {
-            @ApiResponse(code = 200, message = "List prices fetched successfully",
-            examples = @Example(value = @ExampleProperty(mediaType = "application/json",
-                    value = "[{ \"productId\": 35455, \"brandId\": \"1\", \"priceList\": \"4\", \"startDate\": \"2020-06-15T14:00:00.000+00:00\", \"endDate\": \"2020-12-31T22:59:59.000+00:00\", \"price\": \"38.95\" }]"))),
-            @ApiResponse(code = 404, message = "Empty list")})
     @GetMapping
-    public ResponseEntity<List<PriceDto>> getPrices(@RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss") Date date, @RequestParam Integer productId, @RequestParam Integer brandId) {
+    public ResponseEntity<List<PriceDto>> getPrices(@RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss") LocalDateTime date, @RequestParam Integer productId, @RequestParam Integer brandId) {
         List<Price> listPrice = priceUseCase.getPrices(date,productId,brandId);
         if(listPrice.isEmpty()){
             return new ResponseEntity<>(priceMapper.priceListToPriceDtoList(listPrice), HttpStatus.NOT_FOUND);

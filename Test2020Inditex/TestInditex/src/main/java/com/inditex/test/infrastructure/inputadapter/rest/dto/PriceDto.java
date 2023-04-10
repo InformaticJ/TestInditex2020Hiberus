@@ -2,6 +2,7 @@ package com.inditex.test.infrastructure.inputadapter.rest.dto;
 
 import lombok.*;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @Builder
@@ -13,7 +14,7 @@ public class PriceDto {
     private Integer productId;
     private Integer brandId;
     private Integer priceList;
-    private Date startDate;
-    private Date endDate;
+    private LocalDateTime startDate;
+    private LocalDateTime endDate;
     private double price;
 }

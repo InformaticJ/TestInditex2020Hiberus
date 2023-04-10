@@ -1,5 +1,8 @@
 package com.inditex.test.domain;
 import lombok.*;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @Setter
@@ -10,8 +13,8 @@ import java.util.Date;
 public class Price {
         private Integer id;
         private Integer brandId;
-        private Date startDate;
-        private Date endDate;
+        private LocalDateTime startDate;
+        private LocalDateTime endDate;
         private Integer priceList;
         private Integer productId;
         private Integer priority;
