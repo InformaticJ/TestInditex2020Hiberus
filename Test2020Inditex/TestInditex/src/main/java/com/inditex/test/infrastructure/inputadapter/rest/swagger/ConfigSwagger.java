@@ -1,4 +1,4 @@
-package com.inditex.test.infrastructure.rest.inputadapter.swagger;
+package com.inditex.test.infrastructure.inputadapter.rest.swagger;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

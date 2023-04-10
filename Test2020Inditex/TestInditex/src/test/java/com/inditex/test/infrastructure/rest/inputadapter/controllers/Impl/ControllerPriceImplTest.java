@@ -1,6 +1,6 @@
 package com.inditex.test.infrastructure.rest.inputadapter.controllers.Impl;
-
-import com.inditex.test.application.PriceUseCase;
+import com.inditex.test.domain.Price;
+import com.inditex.test.domain.ports.inputport.PriceUseCase;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -9,8 +9,10 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.web.servlet.MockMvc;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyInt;
@@ -31,11 +33,10 @@ class ControllerPriceImplTest {
     private PriceUseCase priceUseCase;
 
     @Test
-    void getPrices() throws Exception {
+    void getPricesNotFound() throws Exception {
         when(priceUseCase.getPrices(any(),anyInt(),anyInt())).thenReturn(new ArrayList<>());
         mockMvc.perform(get("/prices?date=2020-06-14 10:00:00&productId=35455&brandId=1"))
                 .andDo(print())
-                .andExpect(content().json(String.valueOf(new ArrayList<>())))
-                .andExpect(status().isOk());
+                .andExpect(status().isNotFound());
     }
 }

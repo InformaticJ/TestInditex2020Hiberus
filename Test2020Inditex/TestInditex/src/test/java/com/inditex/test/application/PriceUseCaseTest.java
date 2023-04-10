@@ -1,10 +1,7 @@
 package com.inditex.test.application;
 
 import com.inditex.test.domain.Price;
-import com.inditex.test.infrastructure.entities.PriceEntity;
-import com.inditex.test.infrastructure.rest.mappers.PriceMapper;
-import com.inditex.test.infrastructure.rest.outputadapter.RepositoryPrice;
-import com.inditex.test.infrastructure.rest.outputadapter.RepositoryPriceH2;
+import com.inditex.test.infrastructure.outputadapter.RepositoryPriceH2;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -32,7 +29,7 @@ class PriceUseCaseTest {
     @Mock
     RepositoryPriceH2 repositoryPriceH2;
     @InjectMocks
-    PriceUseCase priceUseCase;
+    PriceUseCaseImpl priceUseCase;
     List<Price> prices = new ArrayList<>();
     Price price1 = new Price();
     Price price2 = new Price();

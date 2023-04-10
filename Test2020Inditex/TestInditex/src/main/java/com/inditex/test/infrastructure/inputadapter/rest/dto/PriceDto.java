@@ -1,4 +1,4 @@
-package com.inditex.test.infrastructure.rest.inputadapter.dto;
+package com.inditex.test.infrastructure.inputadapter.rest.dto;
 
 import lombok.*;
 

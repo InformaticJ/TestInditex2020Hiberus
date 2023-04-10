@@ -1,5 +1,5 @@
-package com.inditex.test.infrastructure.rest.outputadapter;
-import com.inditex.test.infrastructure.entities.PriceEntity;
+package com.inditex.test.infrastructure.outputadapter;
+import com.inditex.test.infrastructure.outputadapter.entities.PriceEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

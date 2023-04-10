@@ -1,9 +1,10 @@
 package com.inditex.test.infrastructure.rest.outputadapter;
 
-import com.inditex.test.application.PriceUseCase;
 import com.inditex.test.domain.Price;
-import com.inditex.test.infrastructure.entities.PriceEntity;
-import com.inditex.test.infrastructure.rest.mappers.PriceMapper;
+import com.inditex.test.infrastructure.outputadapter.entities.PriceEntity;
+import com.inditex.test.infrastructure.outputadapter.RepositoryPrice;
+import com.inditex.test.infrastructure.outputadapter.RepositoryPriceH2;
+import com.inditex.test.infrastructure.inputadapter.rest.mappers.PriceMapper;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -19,7 +20,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.Mockito.when;

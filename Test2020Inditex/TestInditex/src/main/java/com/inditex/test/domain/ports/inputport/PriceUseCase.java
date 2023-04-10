@@ -5,6 +5,6 @@ import com.inditex.test.domain.Price;
 import java.util.Date;
 import java.util.List;
 
-public interface PricePort {
+public interface PriceUseCase {
     List<Price> getPrices(Date date, Integer productId, Integer brandId);
 }

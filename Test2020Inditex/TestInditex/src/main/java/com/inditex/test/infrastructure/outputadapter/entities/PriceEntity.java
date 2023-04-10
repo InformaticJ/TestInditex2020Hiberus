@@ -1,4 +1,4 @@
-package com.inditex.test.infrastructure.entities;
+package com.inditex.test.infrastructure.outputadapter.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

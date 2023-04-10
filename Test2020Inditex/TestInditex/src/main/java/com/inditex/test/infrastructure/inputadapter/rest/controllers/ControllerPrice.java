@@ -1,9 +1,8 @@
-package com.inditex.test.infrastructure.rest.inputadapter.controllers;
+package com.inditex.test.infrastructure.inputadapter.rest.controllers;
 
-import com.inditex.test.infrastructure.rest.inputadapter.dto.PriceDto;
+import com.inditex.test.infrastructure.inputadapter.rest.dto.PriceDto;
 import org.springframework.http.ResponseEntity;
 
-import java.text.ParseException;
 import java.util.Date;
 import java.util.List;
 

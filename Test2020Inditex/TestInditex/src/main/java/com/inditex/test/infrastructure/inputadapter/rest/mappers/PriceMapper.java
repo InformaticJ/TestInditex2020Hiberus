@@ -1,8 +1,8 @@
-package com.inditex.test.infrastructure.rest.mappers;
+package com.inditex.test.infrastructure.inputadapter.rest.mappers;
 
 import com.inditex.test.domain.Price;
-import com.inditex.test.infrastructure.entities.PriceEntity;
-import com.inditex.test.infrastructure.rest.inputadapter.dto.PriceDto;
+import com.inditex.test.infrastructure.outputadapter.entities.PriceEntity;
+import com.inditex.test.infrastructure.inputadapter.rest.dto.PriceDto;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
