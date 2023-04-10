@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -30,7 +31,7 @@ public class ControllerPriceImpl implements ControllerPrice {
     public ResponseEntity<List<PriceDto>> getPrices(@RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss") LocalDateTime date, @RequestParam Integer productId, @RequestParam Integer brandId) {
         List<Price> listPrice = priceUseCase.getPrices(date,productId,brandId);
         if(listPrice.isEmpty()){
-            return new ResponseEntity<>(priceMapper.priceListToPriceDtoList(listPrice), HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>(new ArrayList<>(), HttpStatus.NOT_FOUND);
         }
         return new ResponseEntity<>(priceMapper.priceListToPriceDtoList(listPrice), HttpStatus.OK);
     }
