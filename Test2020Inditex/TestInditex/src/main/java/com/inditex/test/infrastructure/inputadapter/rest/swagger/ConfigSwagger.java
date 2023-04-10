@@ -16,7 +16,7 @@ public class ConfigSwagger {
 
     private static final String TITLE = "Test Inditex 2020 API";
     private static final String DESCRIPTION = "Test Inditex 2020 API";
-    private static final String BASE_PACKAGE = "com.inditex.test.infrastructure.rest.inputadapter.controllers.Impl";
+    private static final String BASE_PACKAGE = "com.inditex.test.infrastructure.inputadapter.rest.controllers.Impl";
     private static final String VERSION = "v1";
 
     @Bean
